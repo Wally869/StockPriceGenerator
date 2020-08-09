@@ -7,7 +7,7 @@ Implementing different Methods of Stock Price Simulation:
 
 
 
-## Random Walk, aka Diffusion Process  
+## Geometric Brownian Motion, aka Diffusion Process  
 
 The usual basic method: generate random draws from a normal distribution with a selected annualized volatility level and scale to a chosen timestep.    
 
