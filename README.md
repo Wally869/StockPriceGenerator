@@ -1,13 +1,13 @@
 # StockPriceGenerator  
 
 Implementing different Methods of Stock Price Simulation:
-- Random Walk
+- Geometric Brownian Motion
 - Poisson Jumps
 - Swarm 
 
 
 
-## Geometric Brownian Motion, aka Diffusion Process  
+## Geometric Brownian Motion
 
 The usual basic method: generate random draws from a normal distribution with a selected annualized volatility level and scale to a chosen timestep.    
 
@@ -23,9 +23,9 @@ A jump process is a type of stochastic process that has discrete movements, call
 Basically a Random Walk, with an added chance of a big jump in stock price: the poisson distribution models the frequency of occurence of an event.  
 
 Adding jumps in price simulations is a nice and simple way to simulate "external shocks", such as: 
-- Earnings announcement
+- Earnings announcements
 - Mergers and Acquisition offers  
-- Trade War News
+- Breaking News  
 
 This model enables us to correct one of the flaws of the Random Walk: asset prices are not always continuous. This is especially true in legacy financial markets (by this I mean not crypto markets) since most/all products are not traded 24/7 and exchanges implement limits on price movements to avoid cascading liquidations.  
 
