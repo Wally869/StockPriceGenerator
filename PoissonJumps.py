@@ -48,4 +48,20 @@ class PoissonJumps(object):
 g = PoissonJumps(0.0, 0.15, 3, 0.15, 0.3)
 g.Simulate(10.0, 252)
 g.Plot()
+
+sims = []
+g = PoissonJumps(0.0, 0.15, 3, 0.15, 0.3)
+for _ in range(50):
+  g.Simulate(3.0, 252)
+  sims.append(g.mPrices)
+
+
+indices = np.arange(len(sims[0]))
+for sim in sims:
+  plt.plot(indices, sim)
+
+plt.title("Poisson Jumps")  
+plt.savefig("img/PoissonJumps.png")
+plt.show()
+
 """

@@ -13,6 +13,9 @@ The usual basic method: generate random draws from a normal distribution with a 
 
 This model is very simple, easy to compute and resource-efficient. But it only models normally distributed stock returns with constant volatility, which is an extremely naïve approach.  
 
+![Sample 50 Paths Geometric Brownian Motion](img/GeometricBrownianMotion.png)
+
+
 ## Poisson Jumps  
 
 [From Wikipedia:](https://en.wikipedia.org/wiki/Jump_process)
@@ -28,6 +31,8 @@ Adding jumps in price simulations is a nice and simple way to simulate "external
 - Breaking News  
 
 This model enables us to correct one of the flaws of the Random Walk: asset prices are not always continuous. This is especially true in legacy financial markets (by this I mean not crypto markets) since most/all products are not traded 24/7 and exchanges implement limits on price movements to avoid cascading liquidations.  
+
+![Sample 50 Paths Poisson Jumps](img/PoissonJumps.png)
 
 ## Swarm  
 

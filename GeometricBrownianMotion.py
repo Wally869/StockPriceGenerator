@@ -31,4 +31,19 @@ class GeometricBrownianMotion(object):
 g = GeometricBrownianMotion(0.0, 0.15)
 g.Simulate(3.0, 252)
 g.Plot()
+
+sims = []
+g = GeometricBrownianMotion(0.0, 0.15)
+for _ in range(50):
+  g.Simulate(3.0, 252)
+  sims.append(g.mPrices)
+
+
+indices = np.arange(len(sims[0]))
+for sim in sims:
+  plt.plot(indices, sim)
+
+plt.title("Geometric Brownian Motion")  
+plt.savefig("img/GeometricBrownianMotion.png")
+plt.show()
 """
